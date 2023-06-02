@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+
+    [Header ("Attributes")]
+
     private Transform target;
     public float range = 15f;
+    public float fireRate = 1f;
+    private float fireCountDown = 0f;
+
+    [Header("Unity Setup Fields")]
 
     public string enemyTag = "Enemy";
 
+    public float turnSpeed = 10f;
     [SerializeField] Transform partToRotate;
-    public float turnSpeed=10f;
+
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -52,10 +63,32 @@ public class Turret : MonoBehaviour
         //Target lockon
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime* turnSpeed).eulerAngles;
-        partToRotate.rotation =Quaternion.Euler(0f , rotation.y, 0f);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
+        Debug.Log("Firecountdown is :" + fireCountDown);
+
+        if (fireCountDown <= 0f)
+        {
+            Shoot();
+            fireCountDown = 1f / fireRate;
+        }
+
+        fireCountDown -= Time.deltaTime;
     }
+
+    void Shoot()
+    {
+        Debug.Log("Shoot");
+        GameObject bulletGO =  (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if(bullet!= null)
+        {
+            bullet.Seek(target);
+        }
+    }
+
 
     private void OnDrawGizmosSelected()
     {
