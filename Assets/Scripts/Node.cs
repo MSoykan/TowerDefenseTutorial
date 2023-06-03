@@ -8,6 +8,7 @@ public class Node : MonoBehaviour
 
     public Color hoverColor;
     public Color startColor;
+    public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
     private Renderer rend;
@@ -31,7 +32,7 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (buildManager.CanBuild == null)
+        if (buildManager.CanBuild == false)
         {
             return;
         }
@@ -49,9 +50,17 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (buildManager.CanBuild == null)
+        if (buildManager.CanBuild == false)
             return;
+
+        if (buildManager.HasMoney)
+        {
         rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
     }
 
     private void OnMouseExit()

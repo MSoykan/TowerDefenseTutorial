@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public static int money;
-    [SerializeField]int startMoney = 400;
+    private int startMoney = 400;
 
     private void Start()
     {
         money = startMoney;
+        Debug.Log("Money set to startMoney: " + startMoney);
     }
 }
