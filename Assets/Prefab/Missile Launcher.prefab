@@ -48,11 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 30
-  fireRate: 0.35
+  fireRate: 0.3
   enemyTag: Enemy
   turnSpeed: 10
   partToRotate: {fileID: 908614281330657738}
-  bulletPrefab: {fileID: 2732923910937674796, guid: 0241c0a328850e94591a6d6f84c09b40, type: 3}
+  bulletPrefab: {fileID: 2732923910937674796, guid: f922e41aa3812834b97f397d4a3d724e, type: 3}
   firePoint: {fileID: 2611260822090553694}
 --- !u!1 &119609098521255718
 GameObject:

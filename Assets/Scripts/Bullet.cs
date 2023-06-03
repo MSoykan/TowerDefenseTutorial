@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public GameObject impactEffect;
 
+    public float explosionRadius=0f;
+
     public void Seek(Transform _target)
     {
         target = _target;
@@ -39,8 +41,42 @@ public class Bullet : MonoBehaviour
     public void HitTarget()
     {
         GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance ,2f);
+        Destroy(effectInstance ,5f);
 
+        if (explosionRadius >= 0f)
+        {
+            Explode();
+        }
+        else
+        {
+            Damage(target);
+        }
+
+
+        Destroy(target.gameObject);
         Destroy(gameObject);
     }
+
+    private void Explode()
+    {
+        Collider[] colliders =  Physics.OverlapSphere(transform.position, explosionRadius);
+        foreach ( Collider collider in colliders)
+        {
+            if(collider.tag == "Enemy")
+            {
+                Damage(collider.transform);
+            }
+        }
+    }
+
+    void Damage(Transform enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+
 }
