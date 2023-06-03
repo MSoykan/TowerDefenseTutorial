@@ -7,9 +7,18 @@ public class PlayerStats : MonoBehaviour
     public static int money;
     private int startMoney = 400;
 
+    public static int lives;
+    public int startLives;
+
     private void Start()
     {
         money = startMoney;
         Debug.Log("Money set to startMoney: " + startMoney);
+
+        lives = startLives;
+    }
+    public int GetLives()
+    {
+        return lives;
     }
 }
