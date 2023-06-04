@@ -9987,8 +9987,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2732923910937674796, guid: f922e41aa3812834b97f397d4a3d724e, type: 3}
   fireRate: 1
   useLaser: 1
+  damageOverTime: 30
   lineRenderer: {fileID: 2747190398889087203}
   impactEffect: {fileID: 5173663878954392942}
+  impactLight: {fileID: 873201517}
   enemyTag: Enemy
   turnSpeed: 10
   partToRotate: {fileID: 4717787991189573659}
