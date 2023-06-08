@@ -6079,6 +6079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildEffect: {fileID: 2082301356193799032, guid: f4425f7788e5db7499e9f8b6774ab077, type: 3}
+  sellEffect: {fileID: 2321270774769301334, guid: c6331afa812ffce4999c51632cbe486a, type: 3}
   nodeUI: {fileID: 988830411}
 --- !u!114 &641878483
 MonoBehaviour:
@@ -9519,6 +9520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 988830409}
   upgradeCost: {fileID: 1362629487}
+  sellPrice: {fileID: 1778478058}
   upgradeButton: {fileID: 671153872}
 --- !u!1001 &1021429899
 PrefabInstance:
@@ -13176,7 +13178,7 @@ GameObject:
   - component: {fileID: 1362629488}
   - component: {fileID: 1362629487}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: UpgradePriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17060,7 +17062,7 @@ GameObject:
   - component: {fileID: 1778478059}
   - component: {fileID: 1778478058}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: SellPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

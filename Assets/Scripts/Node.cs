@@ -104,6 +104,8 @@ public class Node : MonoBehaviour
 
 
         //Spawn cool effect
+        GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, this.GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
 
         Destroy(turret);
         turretBlueprint = null;

@@ -9,7 +9,9 @@ public class NodeUI : MonoBehaviour
     public GameObject ui;
 
     public TextMeshProUGUI upgradeCost;
+    public TextMeshProUGUI sellPrice;
     public Button upgradeButton;
+
 
 
     private Node target;
@@ -30,6 +32,7 @@ public class NodeUI : MonoBehaviour
             upgradeCost.text ="Maxed Out.";
             upgradeButton.interactable = false;
         }
+        sellPrice.text = "$" + target.turretBlueprint.GetSellAmount();
         ui.SetActive(true);
     }
 
