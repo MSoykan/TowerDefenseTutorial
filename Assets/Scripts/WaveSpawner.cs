@@ -21,6 +21,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (countdown <= 0f)
         {
+            Debug.Log("How many time did i enter spawn wave function?");
             StartCoroutine(SpawnWave());
 
             countdown = timeBetweenWaves;

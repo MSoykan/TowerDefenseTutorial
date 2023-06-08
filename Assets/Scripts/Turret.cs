@@ -93,7 +93,7 @@ public class Turret : MonoBehaviour
         }
         else
         {
-            Debug.Log("Firecountdown is :" + fireCountDown);
+            //Debug.Log("Firecountdown is :" + fireCountDown);
 
             if (fireCountDown <= 0f)
             {
