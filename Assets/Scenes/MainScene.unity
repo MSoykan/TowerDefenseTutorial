@@ -11558,13 +11558,13 @@ MonoBehaviour:
   missileLauncher:
     prefab: {fileID: 26284985279840305, guid: 912c7fe309bcdd4448ccaf93f27ba8cb, type: 3}
     cost: 300
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 26284985279840305, guid: 741907213980c6242b6260f1b85a4e80, type: 3}
+    upgradeCost: 200
   laserBeamer:
     prefab: {fileID: 5954418634440066382, guid: 2517d3494d0564a429fad57b1857e212, type: 3}
     cost: 350
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 5954418634440066382, guid: 5bb7fcaf1665edb4faf63e1dc66a8d1d, type: 3}
+    upgradeCost: 250
 --- !u!1001 &1224000898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14927,63 +14927,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &1538437600
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7049602560733837349, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_Name
-      value: StandartTurretUpgraded
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682833655668482719, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f8364d5b10edf848812d829b301a5eb, type: 3}
 --- !u!1001 &1580504576
 PrefabInstance:
   m_ObjectHideFlags: 0

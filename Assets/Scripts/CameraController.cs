@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour
 
         Vector3 currentPos = transform.position;
 
-        currentPos.y -= scroll * 1000 *scrollSpeed * Time.deltaTime;
+        currentPos.y -= scroll * 500 *scrollSpeed * Time.deltaTime;
         currentPos.y = Mathf.Clamp(currentPos.y, minY, maxY);
 
         transform.position = currentPos;
