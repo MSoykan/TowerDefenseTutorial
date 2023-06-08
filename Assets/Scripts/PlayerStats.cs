@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int money;
-    private int startMoney = 80000;
+    public static int Money;
+    private int StartMoney = 80000;
 
-    public static int lives;
-    public int startLives;
+    public static int Lives;
+    public int StartLives;
 
     public static int RoundsPlayed;
 
     private void Start()
     {
-        money = startMoney;
-        Debug.Log("Money set to startMoney: " + startMoney);
+        Money = StartMoney;
+        Debug.Log("Money set to startMoney: " + StartMoney);
 
-        lives = startLives;
+        Lives = StartLives;
 
         RoundsPlayed = 0;
     }

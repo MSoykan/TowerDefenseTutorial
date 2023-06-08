@@ -57,12 +57,12 @@ public class Node : MonoBehaviour
 
     void BuildTurret(TurretBlueprint turretToBuild)
     {
-        if (PlayerStats.money < turretToBuild.cost)
+        if (PlayerStats.Money < turretToBuild.cost)
         {
             Debug.Log("Not enough money to build selected turret!");
             return;
         }
-        PlayerStats.money -= turretToBuild.cost;
+        PlayerStats.Money -= turretToBuild.cost;
 
         GameObject _turret = (GameObject)Instantiate(turretToBuild.prefab, this.GetBuildPosition(), Quaternion.identity);
         turret = _turret;
@@ -76,12 +76,12 @@ public class Node : MonoBehaviour
 
     public void UpgradeTurret()
     {
-        if (PlayerStats.money < turretBlueprint.upgradeCost)
+        if (PlayerStats.Money < turretBlueprint.upgradeCost)
         {
             Debug.Log("Not enough money to upgrade that!");
             return;
         }
-        PlayerStats.money -= turretBlueprint.cost;
+        PlayerStats.Money -= turretBlueprint.cost;
 
         //Get rid of the old turret
         Destroy(turret);
@@ -96,6 +96,17 @@ public class Node : MonoBehaviour
         Destroy(effect, 5f);
         isUpgraded = true;
         Debug.Log("Turret upgraded!");
+    }
+
+    public void SellTurret()
+    {
+        PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+
+        //Spawn cool effect
+
+        Destroy(turret);
+        turretBlueprint = null;
     }
 
 
