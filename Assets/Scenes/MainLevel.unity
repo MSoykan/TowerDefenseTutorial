@@ -6204,7 +6204,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce84af772362a494896ad1eb503cd9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4256859890579479809, guid: c39e1fa39a2639a498b92d7c6958df99, type: 3}
+  waves:
+  - enemy: {fileID: 4256859890579479813, guid: 8847ccb7cee87a4499ee4e342cce5621, type: 3}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 4256859890579479813, guid: 8847ccb7cee87a4499ee4e342cce5621, type: 3}
+    count: 5
+    rate: 2
+  - enemy: {fileID: 4256859890579479813, guid: 8847ccb7cee87a4499ee4e342cce5621, type: 3}
+    count: 9
+    rate: 3
+  - enemy: {fileID: 4256859890579479813, guid: e457f1f7d1901a242ac0797bf55f7cfc, type: 3}
+    count: 10
+    rate: 4
+  - enemy: {fileID: 4256859890579479813, guid: 833383055b1bb0a49ba646aeb355e271, type: 3}
+    count: 10
+    rate: 4
   spawnPoint: {fileID: 1481408546}
   timeBetweenWaves: 3
   waveCountdownText: {fileID: 1316847354}
@@ -6277,7 +6292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1751448735}
-  menuSceneName: MainLevel
   sceneFader: {fileID: 943601974}
 --- !u!1001 &644714002
 PrefabInstance:
