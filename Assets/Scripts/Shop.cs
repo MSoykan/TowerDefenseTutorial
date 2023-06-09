@@ -17,7 +17,7 @@ public class Shop : MonoBehaviour
 
     public void SelectStandartTurret ()
     {
-        Debug.Log("Standart turret purchased!");
+        Debug.Log("Standart turret selected!");
         buildManager.SelectTurretToBuild(standartTurret);    
     }
     public void SelectMissileLauncher()
